@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 96);
+/******/ 	return __webpack_require__(__webpack_require__.s = 97);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1507,7 +1507,7 @@ exports.default = {
   proxyPropertyMapping: proxyPropertyMapping,
   proxyPropertyState: proxyPropertyState
 };
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11)))
 
 /***/ }),
 /* 1 */
@@ -1517,7 +1517,7 @@ exports.default = {
 
 
 var support = __webpack_require__(14);
-var base64 = __webpack_require__(80);
+var base64 = __webpack_require__(81);
 var nodejsUtils = __webpack_require__(34);
 var setImmediate = __webpack_require__(199);
 var external = __webpack_require__(24);
@@ -2007,7 +2007,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
-var _seedrandom = __webpack_require__(106);
+var _seedrandom = __webpack_require__(107);
 
 var _seedrandom2 = _interopRequireDefault(_seedrandom);
 
@@ -4160,13 +4160,13 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE. */
 // END HEADER
 
-exports.glMatrix = __webpack_require__(10);
-exports.mat2 = __webpack_require__(99);
-exports.mat2d = __webpack_require__(100);
+exports.glMatrix = __webpack_require__(9);
+exports.mat2 = __webpack_require__(100);
+exports.mat2d = __webpack_require__(101);
 exports.mat3 = __webpack_require__(52);
-exports.mat4 = __webpack_require__(101);
-exports.quat = __webpack_require__(102);
-exports.vec2 = __webpack_require__(103);
+exports.mat4 = __webpack_require__(102);
+exports.quat = __webpack_require__(103);
+exports.vec2 = __webpack_require__(104);
 exports.vec3 = __webpack_require__(53);
 exports.vec4 = __webpack_require__(54);
 
@@ -5074,33 +5074,6 @@ exports.default = {
 /* 9 */
 /***/ (function(module, exports) {
 
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1,eval)("this");
-} catch(e) {
-	// This works if the window reference is available
-	if(typeof window === "object")
-		g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports) {
-
 /* Copyright (c) 2015, Brandon Jones, Colin MacKenzie IV.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -5156,7 +5129,7 @@ module.exports = glMatrix;
 
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5172,7 +5145,7 @@ module.exports = glMatrix;
 
 var base64 = __webpack_require__(69)
 var ieee754 = __webpack_require__(188)
-var isArray = __webpack_require__(75)
+var isArray = __webpack_require__(76)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -6950,7 +6923,34 @@ function isnan (val) {
   return val !== val // eslint-disable-line no-self-compare
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11)))
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
 
 /***/ }),
 /* 12 */
@@ -6967,7 +6967,7 @@ var _macro = __webpack_require__(0);
 
 var _macro2 = _interopRequireDefault(_macro);
 
-var _Shader = __webpack_require__(136);
+var _Shader = __webpack_require__(137);
 
 var _Shader2 = _interopRequireDefault(_Shader);
 
@@ -7737,12 +7737,12 @@ else {
 }
 
 try {
-    exports.nodestream = !!__webpack_require__(76).Readable;
+    exports.nodestream = !!__webpack_require__(77).Readable;
 } catch(e) {
     exports.nodestream = false;
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11).Buffer))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10).Buffer))
 
 /***/ }),
 /* 15 */
@@ -7777,7 +7777,7 @@ var util = __webpack_require__(23);
 util.inherits = __webpack_require__(19);
 /*</replacement>*/
 
-var Readable = __webpack_require__(77);
+var Readable = __webpack_require__(78);
 var Writable = __webpack_require__(45);
 
 util.inherits(Duplex, Readable);
@@ -8238,7 +8238,7 @@ function register(vtkClassName, constructor) {
 
 // Nest register method under the vtk function
 vtk.register = register;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11)))
 
 /***/ }),
 /* 21 */
@@ -8253,7 +8253,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.newInstance = undefined;
 exports.extend = extend;
 
-var _webworkerPromise = __webpack_require__(118);
+var _webworkerPromise = __webpack_require__(119);
 
 var _webworkerPromise2 = _interopRequireDefault(_webworkerPromise);
 
@@ -8277,7 +8277,7 @@ var _ViewNode = __webpack_require__(4);
 
 var _ViewNode2 = _interopRequireDefault(_ViewNode);
 
-var _ComputeGradients = __webpack_require__(119);
+var _ComputeGradients = __webpack_require__(120);
 
 var _ComputeGradients2 = _interopRequireDefault(_ComputeGradients);
 
@@ -9549,7 +9549,7 @@ function objectToString(o) {
   return Object.prototype.toString.call(o);
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11).Buffer))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10).Buffer))
 
 /***/ }),
 /* 24 */
@@ -11114,8 +11114,8 @@ module.exports = "//VTK::System::Dec\n\n/*======================================
 
 var assign    = __webpack_require__(13).assign;
 
-var deflate   = __webpack_require__(176);
-var inflate   = __webpack_require__(179);
+var deflate   = __webpack_require__(177);
+var inflate   = __webpack_require__(180);
 var constants = __webpack_require__(74);
 
 var pako = {};
@@ -11796,7 +11796,7 @@ module.exports = {
     }
 };
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11).Buffer))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10).Buffer))
 
 /***/ }),
 /* 35 */
@@ -12169,11 +12169,11 @@ var _vtk = __webpack_require__(20);
 
 var _vtk2 = _interopRequireDefault(_vtk);
 
-var _DataSetAttributes = __webpack_require__(131);
+var _DataSetAttributes = __webpack_require__(132);
 
 var _DataSetAttributes2 = _interopRequireDefault(_DataSetAttributes);
 
-var _Constants = __webpack_require__(134);
+var _Constants = __webpack_require__(135);
 
 var _Constants2 = _interopRequireDefault(_Constants);
 
@@ -12284,7 +12284,7 @@ var _macro = __webpack_require__(0);
 
 var _macro2 = _interopRequireDefault(_macro);
 
-var _CellArrayBufferObject = __webpack_require__(135);
+var _CellArrayBufferObject = __webpack_require__(136);
 
 var _CellArrayBufferObject2 = _interopRequireDefault(_CellArrayBufferObject);
 
@@ -12383,7 +12383,7 @@ var _macro = __webpack_require__(0);
 
 var _macro2 = _interopRequireDefault(_macro);
 
-var _AbstractMapper3D = __webpack_require__(137);
+var _AbstractMapper3D = __webpack_require__(138);
 
 var _AbstractMapper3D2 = _interopRequireDefault(_AbstractMapper3D);
 
@@ -12391,11 +12391,11 @@ var _DataArray = __webpack_require__(7);
 
 var _DataArray2 = _interopRequireDefault(_DataArray);
 
-var _ImageData = __webpack_require__(139);
+var _ImageData = __webpack_require__(140);
 
 var _ImageData2 = _interopRequireDefault(_ImageData);
 
-var _LookupTable = __webpack_require__(141);
+var _LookupTable = __webpack_require__(142);
 
 var _LookupTable2 = _interopRequireDefault(_LookupTable);
 
@@ -12407,11 +12407,11 @@ var _Constants = __webpack_require__(41);
 
 var _Constants2 = _interopRequireDefault(_Constants);
 
-var _CoincidentTopologyHelper = __webpack_require__(143);
+var _CoincidentTopologyHelper = __webpack_require__(144);
 
 var _CoincidentTopologyHelper2 = _interopRequireDefault(_CoincidentTopologyHelper);
 
-var _Static = __webpack_require__(144);
+var _Static = __webpack_require__(145);
 
 var _Static2 = _interopRequireDefault(_Static);
 
@@ -13137,7 +13137,7 @@ var asyncWrite = !process.browser && ['v0.10', 'v0.9.'].indexOf(process.version.
 /*</replacement>*/
 
 /*<replacement>*/
-var Buffer = __webpack_require__(11).Buffer;
+var Buffer = __webpack_require__(10).Buffer;
 /*</replacement>*/
 
 Writable.WritableState = WritableState;
@@ -13164,7 +13164,7 @@ var Stream;
 })();
 /*</replacement>*/
 
-var Buffer = __webpack_require__(11).Buffer;
+var Buffer = __webpack_require__(10).Buffer;
 
 util.inherits(Writable, Stream);
 
@@ -13837,7 +13837,7 @@ module.exports = function(it){
 /***/ (function(module, exports, __webpack_require__) {
 
 // Thank's IE8 for his funny defineProperty
-module.exports = !__webpack_require__(83)(function(){
+module.exports = !__webpack_require__(84)(function(){
   return Object.defineProperty({}, 'a', {get: function(){ return 7; }}).a != 7;
 });
 
@@ -13849,10 +13849,10 @@ module.exports = !__webpack_require__(83)(function(){
 
 
 var external = __webpack_require__(24);
-var DataWorker = __webpack_require__(87);
-var DataLengthProbe = __webpack_require__(88);
-var Crc32Probe = __webpack_require__(89);
-var DataLengthProbe = __webpack_require__(88);
+var DataWorker = __webpack_require__(88);
+var DataLengthProbe = __webpack_require__(89);
+var Crc32Probe = __webpack_require__(90);
+var DataLengthProbe = __webpack_require__(89);
 
 /**
  * Represent a compressed object, with everything needed to decompress it.
@@ -14026,7 +14026,7 @@ var _macro = __webpack_require__(0);
 
 var _macro2 = _interopRequireDefault(_macro);
 
-var _Prop3D = __webpack_require__(104);
+var _Prop3D = __webpack_require__(105);
 
 var _Prop3D2 = _interopRequireDefault(_Prop3D);
 
@@ -14258,7 +14258,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE. */
 
-var glMatrix = __webpack_require__(10);
+var glMatrix = __webpack_require__(9);
 
 /**
  * @class 3x3 Matrix
@@ -14829,7 +14829,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE. */
 
-var glMatrix = __webpack_require__(10);
+var glMatrix = __webpack_require__(9);
 
 /**
  * @class 3 Dimensional Vector
@@ -15544,7 +15544,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE. */
 
-var glMatrix = __webpack_require__(10);
+var glMatrix = __webpack_require__(9);
 
 /**
  * @class 4 Dimensional Vector
@@ -16083,7 +16083,7 @@ var _macro = __webpack_require__(0);
 
 var _macro2 = _interopRequireDefault(_macro);
 
-var _Plane = __webpack_require__(105);
+var _Plane = __webpack_require__(106);
 
 var _Plane2 = _interopRequireDefault(_Plane);
 
@@ -16545,11 +16545,11 @@ var _macro = __webpack_require__(0);
 
 var _macro2 = _interopRequireDefault(_macro);
 
-var _ForwardPass = __webpack_require__(117);
+var _ForwardPass = __webpack_require__(118);
 
 var _ForwardPass2 = _interopRequireDefault(_ForwardPass);
 
-var _ViewNodeFactory = __webpack_require__(121);
+var _ViewNodeFactory = __webpack_require__(122);
 
 var _ViewNodeFactory2 = _interopRequireDefault(_ViewNodeFactory);
 
@@ -16557,7 +16557,7 @@ var _RenderPass = __webpack_require__(58);
 
 var _RenderPass2 = _interopRequireDefault(_RenderPass);
 
-var _ShaderCache = __webpack_require__(160);
+var _ShaderCache = __webpack_require__(161);
 
 var _ShaderCache2 = _interopRequireDefault(_ShaderCache);
 
@@ -16565,7 +16565,7 @@ var _ViewNode = __webpack_require__(4);
 
 var _ViewNode2 = _interopRequireDefault(_ViewNode);
 
-var _TextureUnitManager = __webpack_require__(162);
+var _TextureUnitManager = __webpack_require__(163);
 
 var _TextureUnitManager2 = _interopRequireDefault(_TextureUnitManager);
 
@@ -17298,7 +17298,7 @@ var _macro = __webpack_require__(0);
 
 var _macro2 = _interopRequireDefault(_macro);
 
-var _Constants = __webpack_require__(128);
+var _Constants = __webpack_require__(129);
 
 var _Constants2 = _interopRequireDefault(_Constants);
 
@@ -17306,7 +17306,7 @@ var _Framebuffer = __webpack_require__(37);
 
 var _Framebuffer2 = _interopRequireDefault(_Framebuffer);
 
-var _SelectionNode = __webpack_require__(129);
+var _SelectionNode = __webpack_require__(130);
 
 var _SelectionNode2 = _interopRequireDefault(_SelectionNode);
 
@@ -18184,7 +18184,7 @@ var _Math = __webpack_require__(2);
 
 var _Math2 = _interopRequireDefault(_Math);
 
-var _InteractorStyleTrackballCamera = __webpack_require__(168);
+var _InteractorStyleTrackballCamera = __webpack_require__(169);
 
 var _InteractorStyleTrackballCamera2 = _interopRequireDefault(_InteractorStyleTrackballCamera);
 
@@ -19238,11 +19238,11 @@ var _vtk = __webpack_require__(20);
 
 var _vtk2 = _interopRequireDefault(_vtk);
 
-var _CellArray = __webpack_require__(171);
+var _CellArray = __webpack_require__(172);
 
 var _CellArray2 = _interopRequireDefault(_CellArray);
 
-var _PointSet = __webpack_require__(172);
+var _PointSet = __webpack_require__(173);
 
 var _PointSet2 = _interopRequireDefault(_PointSet);
 
@@ -19885,6 +19885,247 @@ module.exports = {
 
 /***/ }),
 /* 75 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _pako = __webpack_require__(30);
+
+var _pako2 = _interopRequireDefault(_pako);
+
+var _macro = __webpack_require__(0);
+
+var _macro2 = _interopRequireDefault(_macro);
+
+var _Endian = __webpack_require__(43);
+
+var _Endian2 = _interopRequireDefault(_Endian);
+
+var _Constants = __webpack_require__(8);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var vtkErrorMacro = _macro2.default.vtkErrorMacro,
+    vtkDebugMacro = _macro2.default.vtkDebugMacro;
+
+/* eslint-disable prefer-promise-reject-errors */
+
+var requestCount = 0;
+
+function fetchBinary(url) {
+  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+  return new Promise(function (resolve, reject) {
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function (e) {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200 || xhr.status === 0) {
+          resolve(xhr.response);
+        } else {
+          reject({ xhr: xhr, e: e });
+        }
+      }
+    };
+
+    if (options && options.progressCallback) {
+      xhr.addEventListener('progress', options.progressCallback);
+    }
+
+    // Make request
+    xhr.open('GET', url, true);
+    xhr.responseType = 'arraybuffer';
+    xhr.send();
+  });
+}
+
+function fetchArray() {
+  var instance = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var baseURL = arguments[1];
+  var array = arguments[2];
+  var options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
+
+  if (array.ref && !array.ref.pending) {
+    return new Promise(function (resolve, reject) {
+      var xhr = new XMLHttpRequest();
+      var url = [baseURL, array.ref.basepath, options.compression ? array.ref.id + '.gz' : array.ref.id].join('/');
+
+      xhr.onreadystatechange = function (e) {
+        if (xhr.readyState === 1) {
+          array.ref.pending = true;
+          if (++requestCount === 1 && instance.invokeBusy) {
+            instance.invokeBusy(true);
+          }
+        }
+        if (xhr.readyState === 4) {
+          array.ref.pending = false;
+          if (xhr.status === 200 || xhr.status === 0) {
+            array.buffer = xhr.response;
+
+            if (options.compression) {
+              if (array.dataType === 'string' || array.dataType === 'JSON') {
+                array.buffer = _pako2.default.inflate(new Uint8Array(array.buffer), {
+                  to: 'string'
+                });
+              } else {
+                array.buffer = _pako2.default.inflate(new Uint8Array(array.buffer)).buffer;
+              }
+            }
+
+            if (array.ref.encode === 'JSON') {
+              array.values = JSON.parse(array.buffer);
+            } else {
+              if (_Endian2.default.ENDIANNESS !== array.ref.encode && _Endian2.default.ENDIANNESS) {
+                // Need to swap bytes
+                vtkDebugMacro('Swap bytes of ' + array.name);
+                _Endian2.default.swapBytes(array.buffer, _Constants.DataTypeByteSize[array.dataType]);
+              }
+
+              array.values = new window[array.dataType](array.buffer);
+            }
+
+            if (array.values.length !== array.size) {
+              vtkErrorMacro('Error in FetchArray: ' + array.name + ', does not have the proper array size. Got ' + array.values.length + ', instead of ' + array.size);
+            }
+
+            // Done with the ref and work
+            delete array.ref;
+            if (--requestCount === 0 && instance.invokeBusy) {
+              instance.invokeBusy(false);
+            }
+            if (instance.modified) {
+              instance.modified();
+            }
+            resolve(array);
+          } else {
+            reject({ xhr: xhr, e: e });
+          }
+        }
+      };
+
+      if (options && options.progressCallback) {
+        xhr.addEventListener('progress', options.progressCallback);
+      }
+
+      // Make request
+      xhr.open('GET', url, true);
+      xhr.responseType = options.compression || array.dataType !== 'string' ? 'arraybuffer' : 'text';
+      xhr.send();
+    });
+  }
+
+  return Promise.resolve(array);
+}
+
+// ----------------------------------------------------------------------------
+
+function fetchJSON() {
+  var instance = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var url = arguments[1];
+  var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+  return new Promise(function (resolve, reject) {
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function (e) {
+      if (xhr.readyState === 1) {
+        if (++requestCount === 1 && instance.invokeBusy) {
+          instance.invokeBusy(true);
+        }
+      }
+      if (xhr.readyState === 4) {
+        if (--requestCount === 0 && instance.invokeBusy) {
+          instance.invokeBusy(false);
+        }
+        if (xhr.status === 200 || xhr.status === 0) {
+          if (options.compression) {
+            resolve(JSON.parse(_pako2.default.inflate(new Uint8Array(xhr.response), { to: 'string' })));
+          } else {
+            resolve(JSON.parse(xhr.responseText));
+          }
+        } else {
+          reject({ xhr: xhr, e: e });
+        }
+      }
+    };
+
+    if (options && options.progressCallback) {
+      xhr.addEventListener('progress', options.progressCallback);
+    }
+
+    // Make request
+    xhr.open('GET', url, true);
+    xhr.responseType = options.compression ? 'arraybuffer' : 'text';
+    xhr.send();
+  });
+}
+
+// ----------------------------------------------------------------------------
+
+function fetchText() {
+  var instance = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var url = arguments[1];
+  var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+  if (options && options.compression && options.compression !== 'gz') {
+    vtkErrorMacro('Supported algorithms are: [gz]');
+    vtkErrorMacro('Unkown compression algorithm: ' + options.compression);
+  }
+
+  return new Promise(function (resolve, reject) {
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function (e) {
+      if (xhr.readyState === 1) {
+        if (++requestCount === 1 && instance.invokeBusy) {
+          instance.invokeBusy(true);
+        }
+      }
+      if (xhr.readyState === 4) {
+        if (--requestCount === 0 && instance.invokeBusy) {
+          instance.invokeBusy(false);
+        }
+        if (xhr.status === 200 || xhr.status === 0) {
+          if (options.compression) {
+            resolve(_pako2.default.inflate(new Uint8Array(xhr.response), { to: 'string' }));
+          } else {
+            resolve(xhr.responseText);
+          }
+        } else {
+          reject({ xhr: xhr, e: e });
+        }
+      }
+    };
+
+    if (options.progressCallback) {
+      xhr.addEventListener('progress', options.progressCallback);
+    }
+
+    // Make request
+    xhr.open('GET', url, true);
+    xhr.responseType = options.compression ? 'arraybuffer' : 'text';
+    xhr.send();
+  });
+}
+
+// ----------------------------------------------------------------------------
+
+exports.default = {
+  fetchArray: fetchArray,
+  fetchJSON: fetchJSON,
+  fetchText: fetchText,
+  fetchBinary: fetchBinary // Only for HTTP
+};
+
+/* eslint-enable prefer-promise-reject-errors */
+
+/***/ }),
+/* 76 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -19895,7 +20136,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -19910,7 +20151,7 @@ module.exports = __webpack_require__(31);
 
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19923,11 +20164,11 @@ var processNextTick = __webpack_require__(44);
 /*</replacement>*/
 
 /*<replacement>*/
-var isArray = __webpack_require__(75);
+var isArray = __webpack_require__(76);
 /*</replacement>*/
 
 /*<replacement>*/
-var Buffer = __webpack_require__(11).Buffer;
+var Buffer = __webpack_require__(10).Buffer;
 /*</replacement>*/
 
 Readable.ReadableState = ReadableState;
@@ -19951,7 +20192,7 @@ var Stream;
 })();
 /*</replacement>*/
 
-var Buffer = __webpack_require__(11).Buffer;
+var Buffer = __webpack_require__(10).Buffer;
 
 /*<replacement>*/
 var util = __webpack_require__(23);
@@ -20033,7 +20274,7 @@ function ReadableState(options, stream) {
   this.decoder = null;
   this.encoding = null;
   if (options.encoding) {
-    if (!StringDecoder) StringDecoder = __webpack_require__(78).StringDecoder;
+    if (!StringDecoder) StringDecoder = __webpack_require__(79).StringDecoder;
     this.decoder = new StringDecoder(options.encoding);
     this.encoding = options.encoding;
   }
@@ -20144,7 +20385,7 @@ function needMoreData(state) {
 
 // backwards compatibility.
 Readable.prototype.setEncoding = function (enc) {
-  if (!StringDecoder) StringDecoder = __webpack_require__(78).StringDecoder;
+  if (!StringDecoder) StringDecoder = __webpack_require__(79).StringDecoder;
   this._readableState.decoder = new StringDecoder(enc);
   this._readableState.encoding = enc;
   return this;
@@ -20797,7 +21038,7 @@ function indexOf(xs, x) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(33)))
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21075,7 +21316,7 @@ function simpleEnd(buf) {
 }
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21107,7 +21348,7 @@ PassThrough.prototype._transform = function (chunk, encoding, cb) {
 };
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21220,14 +21461,14 @@ exports.decode = function(input) {
 
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, exports) {
 
 var core = module.exports = {version: '2.3.0'};
 if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // optional / simple context binding
@@ -21252,7 +21493,7 @@ module.exports = function(fn, that, length){
 };
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, exports) {
 
 module.exports = function(exec){
@@ -21264,7 +21505,7 @@ module.exports = function(exec){
 };
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(47)
@@ -21276,7 +21517,7 @@ module.exports = function(it){
 };
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21285,7 +21526,7 @@ module.exports = function(it){
 var utils = __webpack_require__(1);
 var ConvertWorker = __webpack_require__(215);
 var GenericWorker = __webpack_require__(6);
-var base64 = __webpack_require__(80);
+var base64 = __webpack_require__(81);
 var support = __webpack_require__(14);
 var external = __webpack_require__(24);
 
@@ -21500,10 +21741,10 @@ StreamHelper.prototype = {
 
 module.exports = StreamHelper;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11).Buffer))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10).Buffer))
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21521,7 +21762,7 @@ exports.dosPermissions = null;
 
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21644,7 +21885,7 @@ module.exports = DataWorker;
 
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21680,7 +21921,7 @@ module.exports = DataLengthProbe;
 
 
 /***/ }),
-/* 89 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21711,7 +21952,7 @@ module.exports = Crc32Probe;
 
 
 /***/ }),
-/* 90 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21732,7 +21973,7 @@ exports.DEFLATE = __webpack_require__(219);
 
 
 /***/ }),
-/* 91 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21746,7 +21987,7 @@ exports.DATA_DESCRIPTOR = "PK\x07\x08";
 
 
 /***/ }),
-/* 92 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21754,10 +21995,10 @@ exports.DATA_DESCRIPTOR = "PK\x07\x08";
 
 var utils = __webpack_require__(1);
 var support = __webpack_require__(14);
-var ArrayReader = __webpack_require__(93);
+var ArrayReader = __webpack_require__(94);
 var StringReader = __webpack_require__(224);
 var NodeBufferReader = __webpack_require__(225);
-var Uint8ArrayReader = __webpack_require__(95);
+var Uint8ArrayReader = __webpack_require__(96);
 
 /**
  * Create a reader adapted to the data.
@@ -21781,12 +22022,12 @@ module.exports = function (data) {
 
 
 /***/ }),
-/* 93 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var DataReader = __webpack_require__(94);
+var DataReader = __webpack_require__(95);
 var utils = __webpack_require__(1);
 
 function ArrayReader(data) {
@@ -21845,7 +22086,7 @@ module.exports = ArrayReader;
 
 
 /***/ }),
-/* 94 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21968,12 +22209,12 @@ module.exports = DataReader;
 
 
 /***/ }),
-/* 95 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var ArrayReader = __webpack_require__(93);
+var ArrayReader = __webpack_require__(94);
 var utils = __webpack_require__(1);
 
 function Uint8ArrayReader(data) {
@@ -21997,28 +22238,32 @@ module.exports = Uint8ArrayReader;
 
 
 /***/ }),
-/* 96 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["MyWebApp"] = __webpack_require__(97);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
+/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["MyWebApp"] = __webpack_require__(98);
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11)))
 
 /***/ }),
-/* 97 */
+/* 98 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* WEBPACK VAR INJECTION */(function(global) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vtk_js_Sources_favicon__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vtk_js_Sources_favicon__ = __webpack_require__(99);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vtk_js_Sources_favicon___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vtk_js_Sources_favicon__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vtk_js_Sources_Rendering_Core_Actor__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vtk_js_Sources_Rendering_Core_Actor___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vtk_js_Sources_Rendering_Core_Actor__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vtk_js_Sources_Rendering_Misc_FullScreenRenderWindow__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vtk_js_Sources_Rendering_Misc_FullScreenRenderWindow__ = __webpack_require__(117);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vtk_js_Sources_Rendering_Misc_FullScreenRenderWindow___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_vtk_js_Sources_Rendering_Misc_FullScreenRenderWindow__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vtk_js_Sources_Rendering_Core_Mapper__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vtk_js_Sources_Rendering_Core_Mapper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_vtk_js_Sources_Rendering_Core_Mapper__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vtk_js_Sources_IO_Legacy_PolyDataReader__ = __webpack_require__(173);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vtk_js_Sources_IO_Legacy_PolyDataReader__ = __webpack_require__(174);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vtk_js_Sources_IO_Legacy_PolyDataReader___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_vtk_js_Sources_IO_Legacy_PolyDataReader__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_vtk_js_Sources_IO_Core_DataAccessHelper_HttpDataAccessHelper__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_vtk_js_Sources_IO_Core_DataAccessHelper_HttpDataAccessHelper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_vtk_js_Sources_IO_Core_DataAccessHelper_HttpDataAccessHelper__);
+
+
 
 
 
@@ -22032,22 +22277,91 @@ const fileName = 'sphere.vtk'; // 'uh60.vtk'; // 'luggaBody.vtk';
 // Standard rendering code setup
 // ----------------------------------------------------------------------------
 
-const fullScreenRenderer = __WEBPACK_IMPORTED_MODULE_2_vtk_js_Sources_Rendering_Misc_FullScreenRenderWindow___default.a.newInstance();
+/*const fullScreenRenderer = vtkFullScreenRenderWindow.newInstance();
 const renderer = fullScreenRenderer.getRenderer();
 const renderWindow = fullScreenRenderer.getRenderWindow();
 
 const resetCamera = renderer.resetCamera;
-const render = renderWindow.render;
+const render = renderWindow.render;*/
 
 // ----------------------------------------------------------------------------
 // Example code
 // ----------------------------------------------------------------------------
 
-const reader = __WEBPACK_IMPORTED_MODULE_4_vtk_js_Sources_IO_Legacy_PolyDataReader___default.a.newInstance();
-reader.setUrl(`/dist/dist/bunny.vtk`).then(() => {
+/*const reader = vtkPolyDataReader.newInstance();*/
+
+const fileInput = document.getElementById("fileInput");
+
+function handleFile(e) {
+    console.log(e);
+    preventDefaults(e);
+    const dataTransfer = e.dataTransfer;
+    const files = e.target.files || dataTransfer.files;
+    if (files.length > 0) {
+        load(myContainer, {files});
+    }
+}
+
+fileInput.addEventListener('change', handleFile);
+
+function preventDefaults(e) {
+    e.preventDefault();
+    e.stopPropagation();
+}
+
+function load(container, options) {
+    autoInit = false;
+    emptyContainer(container);
+
+    if (options.files) {
+        createViewer(container);
+        let count = options.files.length;
+        while (count--) {
+            loadFile(options.files[count]);
+        }
+        updateCamera(renderer.getActiveCamera());
+    } else if (options.fileURL) {
+        const urls = [].concat(options.fileURL);
+        const progressContainer = document.createElement('div');
+        progressContainer.setAttribute('class', style.progress);
+        container.appendChild(progressContainer);
+
+        const progressCallback = (progressEvent) => {
+            const percent = Math.floor(
+                100 * progressEvent.loaded / progressEvent.total / (urls.length + 1)
+            );
+            progressContainer.innerHTML = `Loading ${percent}%`;
+        };
+
+        createViewer(container);
+        const nbURLs = urls.length;
+        let nbLoadedData = 0;
+
+        /* eslint-disable no-loop-func */
+        while (urls.length) {
+            const url = urls.pop();
+            const name = Array.isArray(userParams.name)
+                ? userParams.name[urls.length]
+                : `Data ${urls.length + 1}`;
+            __WEBPACK_IMPORTED_MODULE_5_vtk_js_Sources_IO_Core_DataAccessHelper_HttpDataAccessHelper___default.a.fetchBinary(url, {
+                progressCallback,
+            }).then((binary) => {
+                nbLoadedData++;
+                if (nbLoadedData === nbURLs) {
+                    container.removeChild(progressContainer);
+                }
+                createPipeline(name, binary);
+                updateCamera(renderer.getActiveCamera());
+            });
+        }
+    }
+}
+
+
+/*reader.setUrl(`/dist/dist/bunny.vtk`).then(() => {
     const polydata = reader.getOutputData(0);
-    const mapper = __WEBPACK_IMPORTED_MODULE_3_vtk_js_Sources_Rendering_Core_Mapper___default.a.newInstance();
-    const actor = __WEBPACK_IMPORTED_MODULE_1_vtk_js_Sources_Rendering_Core_Actor___default.a.newInstance();
+    const mapper = vtkMapper.newInstance();
+    const actor = vtkActor.newInstance();
 
     actor.setMapper(mapper);
     mapper.setInputData(polydata);
@@ -22055,20 +22369,21 @@ reader.setUrl(`/dist/dist/bunny.vtk`).then(() => {
     renderer.addActor(actor);
 
     resetCamera();
-    render();
-});
+    render();*/
+
 
 // -----------------------------------------------------------
 // Make some variables global so that you can inspect and
 // modify objects in your browser's developer console:
 // -----------------------------------------------------------
 
+/*
 global.reader = reader;
-global.fullScreenRenderer = fullScreenRenderer;
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(9)))
+global.fullScreenRenderer = fullScreenRenderer;*/
+
 
 /***/ }),
-/* 98 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22088,7 +22403,7 @@ if (head) {
 }
 
 /***/ }),
-/* 99 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* Copyright (c) 2015, Brandon Jones, Colin MacKenzie IV.
@@ -22111,7 +22426,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE. */
 
-var glMatrix = __webpack_require__(10);
+var glMatrix = __webpack_require__(9);
 
 /**
  * @class 2x2 Matrix
@@ -22396,7 +22711,7 @@ module.exports = mat2;
 
 
 /***/ }),
-/* 100 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* Copyright (c) 2015, Brandon Jones, Colin MacKenzie IV.
@@ -22419,7 +22734,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE. */
 
-var glMatrix = __webpack_require__(10);
+var glMatrix = __webpack_require__(9);
 
 /**
  * @class 2x3 Matrix
@@ -22719,7 +23034,7 @@ module.exports = mat2d;
 
 
 /***/ }),
-/* 101 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* Copyright (c) 2015, Brandon Jones, Colin MacKenzie IV.
@@ -22742,7 +23057,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE. */
 
-var glMatrix = __webpack_require__(10);
+var glMatrix = __webpack_require__(9);
 
 /**
  * @class 4x4 Matrix
@@ -24008,7 +24323,7 @@ module.exports = mat4;
 
 
 /***/ }),
-/* 102 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* Copyright (c) 2015, Brandon Jones, Colin MacKenzie IV.
@@ -24031,7 +24346,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE. */
 
-var glMatrix = __webpack_require__(10);
+var glMatrix = __webpack_require__(9);
 var mat3 = __webpack_require__(52);
 var vec3 = __webpack_require__(53);
 var vec4 = __webpack_require__(54);
@@ -24567,7 +24882,7 @@ module.exports = quat;
 
 
 /***/ }),
-/* 103 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* Copyright (c) 2015, Brandon Jones, Colin MacKenzie IV.
@@ -24590,7 +24905,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE. */
 
-var glMatrix = __webpack_require__(10);
+var glMatrix = __webpack_require__(9);
 
 /**
  * @class 2 Dimensional Vector
@@ -25096,7 +25411,7 @@ module.exports = vec2;
 
 
 /***/ }),
-/* 104 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25122,7 +25437,7 @@ var _Math = __webpack_require__(2);
 
 var _Math2 = _interopRequireDefault(_Math);
 
-var _Prop = __webpack_require__(115);
+var _Prop = __webpack_require__(116);
 
 var _Prop2 = _interopRequireDefault(_Prop);
 
@@ -25322,7 +25637,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 105 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25551,7 +25866,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = Object.assign({ newInstance: newInstance, extend: extend }, STATIC);
 
 /***/ }),
-/* 106 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // A library of seedable RNGs implemented in Javascript.
@@ -25566,17 +25881,17 @@ exports.default = Object.assign({ newInstance: newInstance, extend: extend }, ST
 // alea, a 53-bit multiply-with-carry generator by Johannes Baagøe.
 // Period: ~2^116
 // Reported to pass all BigCrush tests.
-var alea = __webpack_require__(107);
+var alea = __webpack_require__(108);
 
 // xor128, a pure xor-shift generator by George Marsaglia.
 // Period: 2^128-1.
 // Reported to fail: MatrixRank and LinearComp.
-var xor128 = __webpack_require__(108);
+var xor128 = __webpack_require__(109);
 
 // xorwow, George Marsaglia's 160-bit xor-shift combined plus weyl.
 // Period: 2^192-2^32
 // Reported to fail: CollisionOver, SimpPoker, and LinearComp.
-var xorwow = __webpack_require__(109);
+var xorwow = __webpack_require__(110);
 
 // xorshift7, by François Panneton and Pierre L'ecuyer, takes
 // a different approach: it adds robustness by allowing more shifts
@@ -25584,7 +25899,7 @@ var xorwow = __webpack_require__(109);
 // with 256 bits, that passes BigCrush with no systmatic failures.
 // Period 2^256-1.
 // No systematic BigCrush failures reported.
-var xorshift7 = __webpack_require__(110);
+var xorshift7 = __webpack_require__(111);
 
 // xor4096, by Richard Brent, is a 4096-bit xor-shift with a
 // very long period that also adds a Weyl generator. It also passes
@@ -25593,18 +25908,18 @@ var xorshift7 = __webpack_require__(110);
 // collisions.
 // Period: 2^4128-2^32.
 // No systematic BigCrush failures reported.
-var xor4096 = __webpack_require__(111);
+var xor4096 = __webpack_require__(112);
 
 // Tyche-i, by Samuel Neves and Filipe Araujo, is a bit-shifting random
 // number generator derived from ChaCha, a modern stream cipher.
 // https://eden.dei.uc.pt/~sneves/pubs/2011-snfa2.pdf
 // Period: ~2^127
 // No systematic BigCrush failures reported.
-var tychei = __webpack_require__(112);
+var tychei = __webpack_require__(113);
 
 // The original ARC4-based prng included in this library.
 // Period: ~2^1600
-var sr = __webpack_require__(113);
+var sr = __webpack_require__(114);
 
 sr.alea = alea;
 sr.xor128 = xor128;
@@ -25617,7 +25932,7 @@ module.exports = sr;
 
 
 /***/ }),
-/* 107 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A port of an algorithm by Johannes Baagøe <baagoe@baagoe.com>, 2010
@@ -25739,7 +26054,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16)(module)))
 
 /***/ }),
-/* 108 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of the "xor128" prng algorithm by
@@ -25828,7 +26143,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16)(module)))
 
 /***/ }),
-/* 109 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of the "xorwow" prng algorithm by
@@ -25922,7 +26237,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16)(module)))
 
 /***/ }),
-/* 110 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of the "xorshift7" algorithm by
@@ -26027,7 +26342,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16)(module)))
 
 /***/ }),
-/* 111 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of Richard Brent's Xorgens xor4096 algorithm.
@@ -26181,7 +26496,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16)(module)))
 
 /***/ }),
-/* 112 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of the "Tyche-i" prng algorithm by
@@ -26292,7 +26607,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16)(module)))
 
 /***/ }),
-/* 113 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -26531,7 +26846,7 @@ if ((typeof module) == 'object' && module.exports) {
   module.exports = seedrandom;
   // When in node.js, try using crypto package for autoseeding.
   try {
-    nodecrypto = __webpack_require__(114);
+    nodecrypto = __webpack_require__(115);
   } catch (ex) {}
 } else if (true) {
   !(__WEBPACK_AMD_DEFINE_RESULT__ = (function() { return seedrandom; }).call(exports, __webpack_require__, exports, module),
@@ -26546,13 +26861,13 @@ if ((typeof module) == 'object' && module.exports) {
 
 
 /***/ }),
-/* 114 */
+/* 115 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 115 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26711,7 +27026,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 116 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26731,11 +27046,11 @@ var _RenderWindow = __webpack_require__(56);
 
 var _RenderWindow2 = _interopRequireDefault(_RenderWindow);
 
-var _Renderer = __webpack_require__(163);
+var _Renderer = __webpack_require__(164);
 
 var _Renderer2 = _interopRequireDefault(_Renderer);
 
-var _RenderWindow3 = __webpack_require__(167);
+var _RenderWindow3 = __webpack_require__(168);
 
 var _RenderWindow4 = _interopRequireDefault(_RenderWindow3);
 
@@ -26920,7 +27235,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend);
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 117 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27076,7 +27391,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 118 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27254,7 +27569,7 @@ var Worker = function (_TinyEmitter) {
 module.exports = Worker;
 
 /***/ }),
-/* 119 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27262,7 +27577,7 @@ module.exports = Worker;
 
 var _glMatrix = __webpack_require__(3);
 
-var _register = __webpack_require__(120);
+var _register = __webpack_require__(121);
 
 var _register2 = _interopRequireDefault(_register);
 
@@ -27338,7 +27653,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 });
 
 /***/ }),
-/* 120 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27493,7 +27808,7 @@ module.exports = RegisterPromise;
 module.exports.TransferableResponse = TransferableResponse;
 
 /***/ }),
-/* 121 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27509,39 +27824,39 @@ var _macro = __webpack_require__(0);
 
 var _macro2 = _interopRequireDefault(_macro);
 
-var _GenericWidgetRepresentation = __webpack_require__(122);
+var _GenericWidgetRepresentation = __webpack_require__(123);
 
 var _GenericWidgetRepresentation2 = _interopRequireDefault(_GenericWidgetRepresentation);
 
-var _ViewNodeFactory = __webpack_require__(123);
+var _ViewNodeFactory = __webpack_require__(124);
 
 var _ViewNodeFactory2 = _interopRequireDefault(_ViewNodeFactory);
 
-var _Actor = __webpack_require__(124);
+var _Actor = __webpack_require__(125);
 
 var _Actor2 = _interopRequireDefault(_Actor);
 
-var _Actor2D = __webpack_require__(125);
+var _Actor2D = __webpack_require__(126);
 
 var _Actor2D2 = _interopRequireDefault(_Actor2D);
 
-var _Camera = __webpack_require__(126);
+var _Camera = __webpack_require__(127);
 
 var _Camera2 = _interopRequireDefault(_Camera);
 
-var _Glyph3DMapper = __webpack_require__(127);
+var _Glyph3DMapper = __webpack_require__(128);
 
 var _Glyph3DMapper2 = _interopRequireDefault(_Glyph3DMapper);
 
-var _ImageMapper = __webpack_require__(145);
+var _ImageMapper = __webpack_require__(146);
 
 var _ImageMapper2 = _interopRequireDefault(_ImageMapper);
 
-var _ImageSlice = __webpack_require__(147);
+var _ImageSlice = __webpack_require__(148);
 
 var _ImageSlice2 = _interopRequireDefault(_ImageSlice);
 
-var _PixelSpaceCallbackMapper = __webpack_require__(148);
+var _PixelSpaceCallbackMapper = __webpack_require__(149);
 
 var _PixelSpaceCallbackMapper2 = _interopRequireDefault(_PixelSpaceCallbackMapper);
 
@@ -27553,15 +27868,15 @@ var _RenderWindow = __webpack_require__(56);
 
 var _RenderWindow2 = _interopRequireDefault(_RenderWindow);
 
-var _Renderer = __webpack_require__(149);
+var _Renderer = __webpack_require__(150);
 
 var _Renderer2 = _interopRequireDefault(_Renderer);
 
-var _SphereMapper = __webpack_require__(150);
+var _SphereMapper = __webpack_require__(151);
 
 var _SphereMapper2 = _interopRequireDefault(_SphereMapper);
 
-var _StickMapper = __webpack_require__(152);
+var _StickMapper = __webpack_require__(153);
 
 var _StickMapper2 = _interopRequireDefault(_StickMapper);
 
@@ -27569,11 +27884,11 @@ var _Texture = __webpack_require__(21);
 
 var _Texture2 = _interopRequireDefault(_Texture);
 
-var _Volume = __webpack_require__(154);
+var _Volume = __webpack_require__(155);
 
 var _Volume2 = _interopRequireDefault(_Volume);
 
-var _VolumeMapper = __webpack_require__(155);
+var _VolumeMapper = __webpack_require__(156);
 
 var _VolumeMapper2 = _interopRequireDefault(_VolumeMapper);
 
@@ -27635,7 +27950,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 122 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27695,7 +28010,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend);
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 123 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27785,7 +28100,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 124 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27996,7 +28311,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend);
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 125 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28152,7 +28467,7 @@ var newInstance = exports.newInstance = macro.newInstance(extend);
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 126 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28277,7 +28592,7 @@ var newInstance = exports.newInstance = macro.newInstance(extend);
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 127 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28818,7 +29133,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 128 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28840,7 +29155,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 129 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28856,7 +29171,7 @@ var _macro = __webpack_require__(0);
 
 var _macro2 = _interopRequireDefault(_macro);
 
-var _Constants = __webpack_require__(130);
+var _Constants = __webpack_require__(131);
 
 var _Constants2 = _interopRequireDefault(_Constants);
 
@@ -28911,7 +29226,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = Object.assign({ newInstance: newInstance, extend: extend }, _Constants2.default);
 
 /***/ }),
-/* 130 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28965,7 +29280,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 131 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28981,11 +29296,11 @@ var _macro = __webpack_require__(0);
 
 var _macro2 = _interopRequireDefault(_macro);
 
-var _FieldData = __webpack_require__(132);
+var _FieldData = __webpack_require__(133);
 
 var _FieldData2 = _interopRequireDefault(_FieldData);
 
-var _Constants = __webpack_require__(133);
+var _Constants = __webpack_require__(134);
 
 var _Constants2 = _interopRequireDefault(_Constants);
 
@@ -29214,7 +29529,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = Object.assign({ newInstance: newInstance, extend: extend }, _Constants2.default);
 
 /***/ }),
-/* 132 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29472,7 +29787,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 133 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29539,7 +29854,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 134 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29589,7 +29904,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 135 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29901,7 +30216,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend);
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 136 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30021,7 +30336,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 137 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30036,7 +30351,7 @@ var _macro = __webpack_require__(0);
 
 var _macro2 = _interopRequireDefault(_macro);
 
-var _AbstractMapper = __webpack_require__(138);
+var _AbstractMapper = __webpack_require__(139);
 
 var _AbstractMapper2 = _interopRequireDefault(_AbstractMapper);
 
@@ -30154,7 +30469,7 @@ function extend(publicAPI, model) {
 exports.default = { extend: extend };
 
 /***/ }),
-/* 138 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30251,7 +30566,7 @@ function extend(publicAPI, model) {
 exports.default = { extend: extend };
 
 /***/ }),
-/* 139 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30271,7 +30586,7 @@ var _DataSet = __webpack_require__(38);
 
 var _DataSet2 = _interopRequireDefault(_DataSet);
 
-var _StructuredData = __webpack_require__(140);
+var _StructuredData = __webpack_require__(141);
 
 var _StructuredData2 = _interopRequireDefault(_StructuredData);
 
@@ -30640,7 +30955,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 140 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30694,7 +31009,7 @@ function getDataDescriptionFromExtent(inExt) {
 exports.default = Object.assign({ getDataDescriptionFromExtent: getDataDescriptionFromExtent }, _Constants2.default);
 
 /***/ }),
-/* 141 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30714,7 +31029,7 @@ var _Math = __webpack_require__(2);
 
 var _Math2 = _interopRequireDefault(_Math);
 
-var _ScalarsToColors = __webpack_require__(142);
+var _ScalarsToColors = __webpack_require__(143);
 
 var _ScalarsToColors2 = _interopRequireDefault(_ScalarsToColors);
 
@@ -31038,7 +31353,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = Object.assign({ newInstance: newInstance, extend: extend });
 
 /***/ }),
-/* 142 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31608,7 +31923,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = Object.assign({ newInstance: newInstance, extend: extend }, _Constants2.default);
 
 /***/ }),
-/* 143 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31637,7 +31952,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 144 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31704,7 +32019,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 145 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31718,7 +32033,7 @@ exports.extend = extend;
 
 var _glMatrix = __webpack_require__(3);
 
-var _Constants = __webpack_require__(146);
+var _Constants = __webpack_require__(147);
 
 var _Constants2 = _interopRequireDefault(_Constants);
 
@@ -32282,7 +32597,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 146 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32303,7 +32618,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 147 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32470,7 +32785,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 148 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32589,7 +32904,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 149 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32834,7 +33149,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 150 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32870,7 +33185,7 @@ var _PolyDataMapper = __webpack_require__(28);
 
 var _PolyDataMapper2 = _interopRequireDefault(_PolyDataMapper);
 
-var _vtkSphereMapperVS = __webpack_require__(151);
+var _vtkSphereMapperVS = __webpack_require__(152);
 
 var _vtkSphereMapperVS2 = _interopRequireDefault(_vtkSphereMapperVS);
 
@@ -33143,13 +33458,13 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 151 */
+/* 152 */
 /***/ (function(module, exports) {
 
 module.exports = "//VTK::System::Dec\n\n/*=========================================================================\n\n  Program:   Visualization Toolkit\n  Module:    vtkSphereMapperVS.glsl\n\n  Copyright (c) Ken Martin, Will Schroeder, Bill Lorensen\n  All rights reserved.\n  See Copyright.txt or http://www.kitware.com/Copyright.htm for details.\n\n     This software is distributed WITHOUT ANY WARRANTY; without even\n     the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR\n     PURPOSE.  See the above copyright notice for more information.\n\n=========================================================================*/\n// this shader implements imposters in OpenGL for Spheres\n\nattribute vec4 vertexMC;\nattribute vec2 offsetMC;\n\n// optional normal declaration\n//VTK::Normal::Dec\n\n// Texture coordinates\n//VTK::TCoord::Dec\n\nuniform mat3 normalMatrix; // transform model coordinate directions to view coordinates\n\n// material property values\n//VTK::Color::Dec\n\n// clipping plane vars\n//VTK::Clip::Dec\n\n// camera and actor matrix values\n//VTK::Camera::Dec\n\nvarying vec4 vertexVCVSOutput;\nvarying float radiusVCVSOutput;\nvarying vec3 centerVCVSOutput;\n\nuniform int cameraParallel;\n\nvoid main()\n{\n  //VTK::Color::Impl\n\n  //VTK::Normal::Impl\n\n  //VTK::TCoord::Impl\n\n  //VTK::Clip::Impl\n\n  // compute the projected vertex position\n  vertexVCVSOutput = MCVCMatrix * vertexMC;\n  centerVCVSOutput = vertexVCVSOutput.xyz;\n  radiusVCVSOutput = length(offsetMC)*0.5;\n\n  // make the triangle face the camera\n  if (cameraParallel == 0)\n    {\n    vec3 dir = normalize(-vertexVCVSOutput.xyz);\n    vec3 base2 = normalize(cross(dir,vec3(1.0,0.0,0.0)));\n    vec3 base1 = cross(base2,dir);\n    vertexVCVSOutput.xyz = vertexVCVSOutput.xyz + offsetMC.x*base1 + offsetMC.y*base2;\n    }\n  else\n    {\n    // add in the offset\n    vertexVCVSOutput.xy = vertexVCVSOutput.xy + offsetMC;\n    }\n\n  gl_Position = VCDCMatrix * vertexVCVSOutput;\n}\n"
 
 /***/ }),
-/* 152 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33173,7 +33488,7 @@ var _BufferObject = __webpack_require__(27);
 
 var _BufferObject2 = _interopRequireDefault(_BufferObject);
 
-var _vtkStickMapperVS = __webpack_require__(153);
+var _vtkStickMapperVS = __webpack_require__(154);
 
 var _vtkStickMapperVS2 = _interopRequireDefault(_vtkStickMapperVS);
 
@@ -33535,13 +33850,13 @@ var newInstance = exports.newInstance = macro.newInstance(extend, 'vtkOpenGLStic
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 153 */
+/* 154 */
 /***/ (function(module, exports) {
 
 module.exports = "//VTK::System::Dec\n\n/*=========================================================================\n\n  Program:   Visualization Toolkit\n  Module:    vtkStickMapperVS.glsl\n\n  Copyright (c) Ken Martin, Will Schroeder, Bill Lorensen\n  All rights reserved.\n  See Copyright.txt or http://www.kitware.com/Copyright.htm for details.\n\n     This software is distributed WITHOUT ANY WARRANTY; without even\n     the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR\n     PURPOSE.  See the above copyright notice for more information.\n\n=========================================================================*/\n// this shader implements imposters in OpenGL for Sticks\n\nattribute vec4 vertexMC;\nattribute vec3 orientMC;\nattribute vec4 offsetMC;\nattribute float radiusMC;\n\n// optional normal declaration\n//VTK::Normal::Dec\n\n//VTK::Picking::Dec\n\n// Texture coordinates\n//VTK::TCoord::Dec\n\nuniform mat3 normalMatrix; // transform model coordinate directions to view coordinates\n\n// material property values\n//VTK::Color::Dec\n\n// clipping plane vars\n//VTK::Clip::Dec\n\n// camera and actor matrix values\n//VTK::Camera::Dec\n\nvarying vec4 vertexVCVSOutput;\nvarying float radiusVCVSOutput;\nvarying float lengthVCVSOutput;\nvarying vec3 centerVCVSOutput;\nvarying vec3 orientVCVSOutput;\n\nuniform int cameraParallel;\n\nvoid main()\n{\n  //VTK::Picking::Impl\n\n  //VTK::Color::Impl\n\n  //VTK::Normal::Impl\n\n  //VTK::TCoord::Impl\n\n  //VTK::Clip::Impl\n\n  vertexVCVSOutput = MCVCMatrix * vertexMC;\n  centerVCVSOutput = vertexVCVSOutput.xyz;\n  radiusVCVSOutput = radiusMC;\n  lengthVCVSOutput = length(orientMC);\n  orientVCVSOutput = normalMatrix * normalize(orientMC);\n\n  // make sure it is pointing out of the screen\n  if (orientVCVSOutput.z < 0.0)\n    {\n    orientVCVSOutput = -orientVCVSOutput;\n    }\n\n  // make the basis\n  vec3 xbase;\n  vec3 ybase;\n  vec3 dir = vec3(0.0,0.0,1.0);\n  if (cameraParallel == 0)\n    {\n    dir = normalize(-vertexVCVSOutput.xyz);\n    }\n  if (abs(dot(dir,orientVCVSOutput)) == 1.0)\n    {\n    xbase = normalize(cross(vec3(0.0,1.0,0.0),orientVCVSOutput));\n    ybase = cross(xbase,orientVCVSOutput);\n    }\n  else\n    {\n    xbase = normalize(cross(orientVCVSOutput,dir));\n    ybase = cross(orientVCVSOutput,xbase);\n    }\n\n  vec3 offsets = offsetMC.xyz*2.0-1.0;\n  vertexVCVSOutput.xyz = vertexVCVSOutput.xyz +\n    radiusVCVSOutput*offsets.x*xbase +\n    radiusVCVSOutput*offsets.y*ybase +\n    0.5*lengthVCVSOutput*offsets.z*orientVCVSOutput;\n\n  gl_Position = VCDCMatrix * vertexVCVSOutput;\n}\n"
 
 /***/ }),
-/* 154 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33681,7 +33996,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 155 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33737,17 +34052,17 @@ var _Constants2 = __webpack_require__(25);
 
 var _Constants3 = __webpack_require__(26);
 
-var _Constants4 = __webpack_require__(156);
+var _Constants4 = __webpack_require__(157);
 
-var _vtkVolumeVS = __webpack_require__(157);
+var _vtkVolumeVS = __webpack_require__(158);
 
 var _vtkVolumeVS2 = _interopRequireDefault(_vtkVolumeVS);
 
-var _vtkVolumeFS = __webpack_require__(158);
+var _vtkVolumeFS = __webpack_require__(159);
 
 var _vtkVolumeFS2 = _interopRequireDefault(_vtkVolumeFS);
 
-var _vtkVolumeFS3 = __webpack_require__(159);
+var _vtkVolumeFS3 = __webpack_require__(160);
 
 var _vtkVolumeFS4 = _interopRequireDefault(_vtkVolumeFS3);
 
@@ -34740,7 +35055,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 156 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34760,25 +35075,25 @@ exports.default = {
 };
 
 /***/ }),
-/* 157 */
+/* 158 */
 /***/ (function(module, exports) {
 
 module.exports = "//VTK::System::Dec\n\n/*=========================================================================\n\n  Program:   Visualization Toolkit\n  Module:    vtkPolyDataVS.glsl\n\n  Copyright (c) Ken Martin, Will Schroeder, Bill Lorensen\n  All rights reserved.\n  See Copyright.txt or http://www.kitware.com/Copyright.htm for details.\n\n     This software is distributed WITHOUT ANY WARRANTY; without even\n     the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR\n     PURPOSE.  See the above copyright notice for more information.\n\n=========================================================================*/\n\nattribute vec4 vertexDC;\n\nvarying vec3 vertexVCVSOutput;\nuniform mat4 DCVCMatrix;\n\nuniform float dcxmin;\nuniform float dcxmax;\nuniform float dcymin;\nuniform float dcymax;\n\nvoid main()\n{\n  // dcsmall is the device coords reduced to the\n  // x y area covered by the volume\n  vec4 dcsmall = vec4(\n    dcxmin + 0.5 * (vertexDC.x + 1.0) * (dcxmax - dcxmin),\n    dcymin + 0.5 * (vertexDC.y + 1.0) * (dcymax - dcymin),\n    vertexDC.z,\n    vertexDC.w);\n  vec4 vcpos = DCVCMatrix * dcsmall;\n  vertexVCVSOutput = vcpos.xyz/vcpos.w;\n  gl_Position = dcsmall;\n}\n"
 
 /***/ }),
-/* 158 */
+/* 159 */
 /***/ (function(module, exports) {
 
 module.exports = "//VTK::System::Dec\n\n/*=========================================================================\n\n  Program:   Visualization Toolkit\n  Module:    vtkPolyDataFS.glsl\n\n  Copyright (c) Ken Martin, Will Schroeder, Bill Lorensen\n  All rights reserved.\n  See Copyright.txt or http://www.kitware.com/Copyright.htm for details.\n\n     This software is distributed WITHOUT ANY WARRANTY; without even\n     the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR\n     PURPOSE.  See the above copyright notice for more information.\n\n=========================================================================*/\n// Template for the polydata mappers fragment shader\n\n// the output of this shader\n//VTK::Output::Dec\n\nvarying vec3 vertexVCVSOutput;\n\n// camera values\nuniform float camThick;\nuniform float camNear;\nuniform float camFar;\n\n// values describing the volume geometry\nuniform vec3 vOriginVC;\nuniform vec3 vSize;\nuniform vec3 vPlaneNormal0;\nuniform float vPlaneDistance0;\nuniform vec3 vPlaneNormal1;\nuniform float vPlaneDistance1;\nuniform vec3 vPlaneNormal2;\nuniform float vPlaneDistance2;\nuniform vec3 vPlaneNormal3;\nuniform float vPlaneDistance3;\nuniform vec3 vPlaneNormal4;\nuniform float vPlaneDistance4;\nuniform vec3 vPlaneNormal5;\nuniform float vPlaneDistance5;\n\n// opacity and color textures\nuniform sampler2D otexture;\nuniform float oshift;\nuniform float oscale;\nuniform sampler2D ctexture;\nuniform float cshift;\nuniform float cscale;\n\n// jitter texture\nuniform sampler2D jtexture;\n\n// some 3D texture values\nuniform sampler2D texture1;\nuniform float sampleDistance;\nuniform vec3 vVCToIJK;\nuniform float texWidth;\nuniform float texHeight;\nuniform int xreps;\nuniform float xstride;\nuniform float ystride;\nuniform int repWidth;\nuniform int repHeight;\nuniform int repDepth;\n\n// declaration for intermixed geometry\n//VTK::ZBuffer::Dec\n\n// Lighting values\n//VTK::Light::Dec\n\n// normal calc\n//VTK::Normal::Dec\n\n// gradient opacity\n//VTK::GradientOpacity::Dec\n\nvec2 getTextureCoord(vec3 ijk, float offset)\n{\n  // uncomment the following line to see  the  packed  texture\n  // return vec2(ijk.x/float(repWidth), ijk.y/float(repHeight));\n  int z = int(ijk.z + offset);\n  int yz = z / xreps;\n  int xz = z - yz*xreps;\n\n  float ni = (ijk.x + float(xz * repWidth))/xstride;\n  float nj = (ijk.y + float(yz * repHeight))/ystride;\n\n  vec2 tpos = vec2(ni/texWidth, nj/texHeight);\n\n  return tpos;\n}\n\n// because scalars may be encoded\n// this func will decode them as needed\nfloat getScalarValue(vec2 tpos)\n{\n  //VTK::ScalarValueFunction::Impl\n}\n\nvec2 getRayPointIntersectionBounds(\n  vec3 rayPos, vec3 rayDir,\n  vec3 planeDir, float planeDist,\n  vec2 tbounds, vec3 vPlaneX, vec3 vPlaneY,\n  float vSize1, float vSize2)\n{\n  float result = dot(rayDir, planeDir);\n  if (result == 0.0)\n  {\n    return tbounds;\n  }\n  result = -1.0 * (dot(rayPos, planeDir) + planeDist) / result;\n  vec3 xposVC = rayPos + rayDir*result;\n  vec3 vxpos = xposVC - vOriginVC;\n  vec2 vpos = vec2(\n    dot(vxpos, vPlaneX),\n    dot(vxpos, vPlaneY));\n\n  // on some apple nvidia systems this does not work\n  // if (vpos.x < 0.0 || vpos.x > vSize1 ||\n  //     vpos.y < 0.0 || vpos.y > vSize2)\n  // even just\n  // if (vpos.x < 0.0 || vpos.y < 0.0)\n  // fails\n  // so instead we compute a value that represents in and out\n  //and then compute the return using this value\n  float xcheck = max(0.0, vpos.x * (vpos.x - vSize1)); //  0 means in bounds\n  float check = sign(max(xcheck, vpos.y * (vpos.y - vSize2))); //  0 means in bounds, 1 = out\n\n  return mix(\n   vec2(min(tbounds.x, result), max(tbounds.y, result)), // in value\n   tbounds, // out value\n   check);  // 0 in 1 out\n}\n\nvoid main()\n{\n  float scalar;\n  vec4 scalarComps;\n\n  // camera is at 0,0,0 so rayDir for perspective is just the vc coord\n  vec3 rayDir = normalize(vertexVCVSOutput);\n  vec2 tbounds = vec2(100.0*camFar, -1.0);\n\n  // all this is in View Coordinates\n  tbounds = getRayPointIntersectionBounds(vertexVCVSOutput, rayDir,\n    vPlaneNormal0, vPlaneDistance0, tbounds, vPlaneNormal2, vPlaneNormal4,\n    vSize.y, vSize.z);\n  tbounds = getRayPointIntersectionBounds(vertexVCVSOutput, rayDir,\n    vPlaneNormal1, vPlaneDistance1, tbounds, vPlaneNormal2, vPlaneNormal4,\n    vSize.y, vSize.z);\n  tbounds = getRayPointIntersectionBounds(vertexVCVSOutput, rayDir,\n    vPlaneNormal2, vPlaneDistance2, tbounds, vPlaneNormal0, vPlaneNormal4,\n    vSize.x, vSize.z);\n  tbounds = getRayPointIntersectionBounds(vertexVCVSOutput, rayDir,\n    vPlaneNormal3, vPlaneDistance3, tbounds, vPlaneNormal0, vPlaneNormal4,\n    vSize.x, vSize.z);\n  tbounds = getRayPointIntersectionBounds(vertexVCVSOutput, rayDir,\n    vPlaneNormal4, vPlaneDistance4, tbounds, vPlaneNormal0, vPlaneNormal2,\n    vSize.x, vSize.y);\n  tbounds = getRayPointIntersectionBounds(vertexVCVSOutput, rayDir,\n    vPlaneNormal5, vPlaneDistance5, tbounds, vPlaneNormal0, vPlaneNormal2,\n    vSize.x, vSize.y);\n\n  // do not go behind front clipping plane\n  tbounds.x = max(0.0,tbounds.x);\n\n  // do not go PAST far clipping plane\n  float farDist = -camThick/rayDir.z;\n  tbounds.y = min(farDist,tbounds.y);\n\n  // Do not go past the zbuffer value if set\n  // This is used for intermixing opaque geometry\n  //VTK::ZBuffer::Impl\n\n  // do we need to composite?\n  if (tbounds.y > tbounds.x)\n  {\n    // compute starting and ending values in volume space\n    vec3 startVC = vertexVCVSOutput + tbounds.x*rayDir;\n    startVC = startVC - vOriginVC;\n\n    // vpos and endvpos are in VolumeCoords not Index yet\n    vec3 vpos = vec3(\n      dot(startVC, vPlaneNormal0),\n      dot(startVC, vPlaneNormal2),\n      dot(startVC, vPlaneNormal4));\n    vec3 endVC = vertexVCVSOutput + tbounds.y*rayDir;\n    endVC = endVC - vOriginVC;\n    vec3 endvpos = vec3(\n      dot(endVC, vPlaneNormal0),\n      dot(endVC, vPlaneNormal2),\n      dot(endVC, vPlaneNormal4));\n    vec3 vdelta = endvpos - vpos;\n    float numSteps = length(vdelta) / sampleDistance;\n    vdelta = vdelta / numSteps;\n\n    // start slightly inside and apply some jitter\n    float jitter = texture2D(jtexture, gl_FragCoord.xy/32.0).r;\n    vpos = vpos + vdelta*(0.01 + 0.98*jitter);\n    vec4 color = vec4(0.0, 0.0, 0.0, 0.0);\n    int count = int(numSteps - 0.2); // end slightly inside\n\n    vec3 ijk = vpos * vVCToIJK;\n    vdelta = vdelta * vVCToIJK;\n    for (int i = 0; i < //VTK::MaximumSamplesValue ; ++i)\n    {\n      // compute the 2d texture coordinate/s\n      //VTK::ComputeTCoords\n\n      // compute the scalar\n      //VTK::ScalarFunction\n\n      // now map through opacity and color\n      vec4 tcolor = texture2D(ctexture, vec2(scalar * cscale + cshift, 0.5));\n      tcolor.a = texture2D(otexture, vec2(scalar * oscale + oshift, 0.5)).r;\n\n      // compute the normal if needed\n      //VTK::Normal::Impl\n\n      // handle gradient opacity\n      //VTK::GradientOpacity::Impl\n\n      // handle lighting\n      //VTK::Light::Impl\n\n      float mix = (1.0 - color.a);\n\n      // this line should not be needed but nvidia seems to not handle\n      // the break correctly on windows/chrome 58 angle\n      mix = mix * sign(max(float(count - i + 1), 0.0));\n\n      color = color + vec4(tcolor.rgb*tcolor.a, tcolor.a)*mix;\n      if (i >= count) { break; }\n      if (color.a > 0.99) { color.a = 1.0; break; }\n      ijk += vdelta;\n    }\n\n    gl_FragData[0] = vec4(color.rgb/color.a, color.a);\n    // gl_FragData[0] = vec4(tbounds.y/farDist, tbounds.x/farDist, color.b/color.a, 1.0);\n  }\n  else\n  {\n    discard;\n  }\n}\n"
 
 /***/ }),
-/* 159 */
+/* 160 */
 /***/ (function(module, exports) {
 
 module.exports = "//VTK::System::Dec\n\n/*=========================================================================\n\n  Program:   Visualization Toolkit\n  Module:    vtkPolyDataFS.glsl\n\n  Copyright (c) Ken Martin, Will Schroeder, Bill Lorensen\n  All rights reserved.\n  See Copyright.txt or http://www.kitware.com/Copyright.htm for details.\n\n     This software is distributed WITHOUT ANY WARRANTY; without even\n     the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR\n     PURPOSE.  See the above copyright notice for more information.\n\n=========================================================================*/\n// Template for the polydata mappers fragment shader\n\n// the output of this shader\n//VTK::Output::Dec\n\nvarying vec3 vertexVCVSOutput;\n\n// camera values\nuniform float camThick;\nuniform float camNear;\nuniform float camFar;\n\n// values describing the volume geometry\nuniform vec3 vOriginVC;\nuniform vec3 vSize;\nuniform vec3 vPlaneNormal0;\nuniform float vPlaneDistance0;\nuniform vec3 vPlaneNormal1;\nuniform float vPlaneDistance1;\nuniform vec3 vPlaneNormal2;\nuniform float vPlaneDistance2;\nuniform vec3 vPlaneNormal3;\nuniform float vPlaneDistance3;\nuniform vec3 vPlaneNormal4;\nuniform float vPlaneDistance4;\nuniform vec3 vPlaneNormal5;\nuniform float vPlaneDistance5;\n\n// opacity and color textures\nuniform sampler2D otexture;\nuniform float oshift;\nuniform float oscale;\nuniform sampler2D ctexture;\nuniform float cshift;\nuniform float cscale;\n\n// jitter texture\nuniform sampler2D jtexture;\n\n// some 3D texture values\nuniform highp sampler3D texture1;\nuniform float sampleDistance;\nuniform vec3 vVCToIJK;\n\n// declaration for intermixed geometry\n//VTK::ZBuffer::Dec\n\n// Lighting values\n//VTK::Light::Dec\n\n// normal calc\n//VTK::Normal::Dec\n\n// gradient opacity\n//VTK::GradientOpacity::Dec\n\nvec2 getRayPointIntersectionBounds(\n  vec3 rayPos, vec3 rayDir,\n  vec3 planeDir, float planeDist,\n  vec2 tbounds, vec3 vPlaneX, vec3 vPlaneY,\n  float vSize1, float vSize2)\n{\n  float result = dot(rayDir, planeDir);\n  if (result == 0.0)\n  {\n    return tbounds;\n  }\n  result = -1.0 * (dot(rayPos, planeDir) + planeDist) / result;\n  vec3 xposVC = rayPos + rayDir*result;\n  vec3 vxpos = xposVC - vOriginVC;\n  vec2 vpos = vec2(\n    dot(vxpos, vPlaneX),\n    dot(vxpos, vPlaneY));\n\n  // on some apple nvidia systems this does not work\n  // if (vpos.x < 0.0 || vpos.x > vSize1 ||\n  //     vpos.y < 0.0 || vpos.y > vSize2)\n  // even just\n  // if (vpos.x < 0.0 || vpos.y < 0.0)\n  // fails\n  // so instead we compute a value that represents in and out\n  //and then compute the return using this value\n  float xcheck = max(0.0, vpos.x * (vpos.x - vSize1)); //  0 means in bounds\n  float check = sign(max(xcheck, vpos.y * (vpos.y - vSize2))); //  0 means in bounds, 1 = out\n\n  return mix(\n   vec2(min(tbounds.x, result), max(tbounds.y, result)), // in value\n   tbounds, // out value\n   check);  // 0 in 1 out\n}\n\nvoid main()\n{\n  float scalar;\n  vec4 scalarComps;\n\n  // camera is at 0,0,0 so rayDir for perspective is just the vc coord\n  vec3 rayDir = normalize(vertexVCVSOutput);\n  vec2 tbounds = vec2(100.0*camFar, -1.0);\n\n  // all this is in View Coordinates\n  tbounds = getRayPointIntersectionBounds(vertexVCVSOutput, rayDir,\n    vPlaneNormal0, vPlaneDistance0, tbounds, vPlaneNormal2, vPlaneNormal4,\n    vSize.y, vSize.z);\n  tbounds = getRayPointIntersectionBounds(vertexVCVSOutput, rayDir,\n    vPlaneNormal1, vPlaneDistance1, tbounds, vPlaneNormal2, vPlaneNormal4,\n    vSize.y, vSize.z);\n  tbounds = getRayPointIntersectionBounds(vertexVCVSOutput, rayDir,\n    vPlaneNormal2, vPlaneDistance2, tbounds, vPlaneNormal0, vPlaneNormal4,\n    vSize.x, vSize.z);\n  tbounds = getRayPointIntersectionBounds(vertexVCVSOutput, rayDir,\n    vPlaneNormal3, vPlaneDistance3, tbounds, vPlaneNormal0, vPlaneNormal4,\n    vSize.x, vSize.z);\n  tbounds = getRayPointIntersectionBounds(vertexVCVSOutput, rayDir,\n    vPlaneNormal4, vPlaneDistance4, tbounds, vPlaneNormal0, vPlaneNormal2,\n    vSize.x, vSize.y);\n  tbounds = getRayPointIntersectionBounds(vertexVCVSOutput, rayDir,\n    vPlaneNormal5, vPlaneDistance5, tbounds, vPlaneNormal0, vPlaneNormal2,\n    vSize.x, vSize.y);\n\n  // do not go behind front clipping plane\n  tbounds.x = max(0.0,tbounds.x);\n\n  // do not go PAST far clipping plane\n  float farDist = -camThick/rayDir.z;\n  tbounds.y = min(farDist,tbounds.y);\n\n  // Do not go past the zbuffer value if set\n  // This is used for intermixing opaque geometry\n  //VTK::ZBuffer::Impl\n\n  // do we need to composite?\n  if (tbounds.y > tbounds.x)\n  {\n    // compute starting and ending values in volume space\n    vec3 startVC = vertexVCVSOutput + tbounds.x*rayDir;\n    startVC = startVC - vOriginVC;\n\n    // vpos and endvpos are in VolumeCoords not Index yet\n    vec3 vpos = vec3(\n      dot(startVC, vPlaneNormal0),\n      dot(startVC, vPlaneNormal2),\n      dot(startVC, vPlaneNormal4));\n    vec3 endVC = vertexVCVSOutput + tbounds.y*rayDir;\n    endVC = endVC - vOriginVC;\n    vec3 endvpos = vec3(\n      dot(endVC, vPlaneNormal0),\n      dot(endVC, vPlaneNormal2),\n      dot(endVC, vPlaneNormal4));\n    vec3 vdelta = endvpos - vpos;\n    float numSteps = length(vdelta) / sampleDistance;\n    vdelta = vdelta / numSteps;\n\n    // start slightly inside and apply some jitter\n    float jitter = texture2D(jtexture, gl_FragCoord.xy/32.0).r;\n    vpos = vpos + vdelta*(0.01 + 0.98*jitter);\n    vec4 color = vec4(0.0, 0.0, 0.0, 0.0);\n\n    vec3 ijk = vpos * vVCToIJK;\n    vdelta = vdelta * vVCToIJK;\n    float i = 0.0;\n    while (i < numSteps - 0.2)\n    {\n      // compute the scalar\n      scalar = texture(texture1, ijk).r;\n\n      // now map through opacity and color\n      vec4 tcolor = texture2D(ctexture, vec2(scalar * cscale + cshift, 0.5));\n      tcolor.a = texture2D(otexture, vec2(scalar * oscale + oshift, 0.5)).r;\n\n      // compute the normal if needed\n      //VTK::Normal::Impl\n\n      // handle gradient opacity\n      //VTK::GradientOpacity::Impl\n\n      // handle lighting\n      //VTK::Light::Impl\n\n      float mix = (1.0 - color.a);\n\n      color = color + vec4(tcolor.rgb*tcolor.a, tcolor.a)*mix;\n      if (color.a > 0.99) { color.a = 1.0; break; }\n      ijk += vdelta;\n      i += 1.0;\n    }\n\n    gl_FragData[0] = vec4(color.rgb/color.a, color.a);\n    // gl_FragData[0] = vec4(tbounds.y/farDist, tbounds.x/farDist, color.b/color.a, 1.0);\n  }\n  else\n  {\n    discard;\n  }\n}\n"
 
 /***/ }),
-/* 160 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34790,7 +35105,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.newInstance = undefined;
 exports.extend = extend;
 
-var _blueimpMd = __webpack_require__(161);
+var _blueimpMd = __webpack_require__(162);
 
 var _blueimpMd2 = _interopRequireDefault(_blueimpMd);
 
@@ -34992,7 +35307,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 161 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -35279,7 +35594,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/*
 
 
 /***/ }),
-/* 162 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35421,7 +35736,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 163 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35439,11 +35754,11 @@ var _macro = __webpack_require__(0);
 
 var _macro2 = _interopRequireDefault(_macro);
 
-var _Camera = __webpack_require__(164);
+var _Camera = __webpack_require__(165);
 
 var _Camera2 = _interopRequireDefault(_Camera);
 
-var _Light = __webpack_require__(165);
+var _Light = __webpack_require__(166);
 
 var _Light2 = _interopRequireDefault(_Light);
 
@@ -35451,7 +35766,7 @@ var _Math = __webpack_require__(2);
 
 var _Math2 = _interopRequireDefault(_Math);
 
-var _Viewport = __webpack_require__(166);
+var _Viewport = __webpack_require__(167);
 
 var _Viewport2 = _interopRequireDefault(_Viewport);
 
@@ -36072,7 +36387,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 164 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36720,7 +37035,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 165 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36861,7 +37176,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = { newInstance: newInstance, extend: extend, LIGHT_TYPES: LIGHT_TYPES };
 
 /***/ }),
-/* 166 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37040,7 +37355,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 167 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37208,7 +37523,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 168 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37224,7 +37539,7 @@ var _macro = __webpack_require__(0);
 
 var _macro2 = _interopRequireDefault(_macro);
 
-var _InteractorStyle = __webpack_require__(169);
+var _InteractorStyle = __webpack_require__(170);
 
 var _InteractorStyle2 = _interopRequireDefault(_InteractorStyle);
 
@@ -37616,7 +37931,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = Object.assign({ newInstance: newInstance, extend: extend });
 
 /***/ }),
-/* 169 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37632,7 +37947,7 @@ var _macro = __webpack_require__(0);
 
 var _macro2 = _interopRequireDefault(_macro);
 
-var _InteractorObserver = __webpack_require__(170);
+var _InteractorObserver = __webpack_require__(171);
 
 var _InteractorObserver2 = _interopRequireDefault(_InteractorObserver);
 
@@ -37772,7 +38087,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = Object.assign({ newInstance: newInstance, extend: extend }, _Constants2.default);
 
 /***/ }),
-/* 170 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37958,7 +38273,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = Object.assign({ newInstance: newInstance, extend: extend }, STATIC);
 
 /***/ }),
-/* 171 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38068,7 +38383,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = Object.assign({ newInstance: newInstance, extend: extend }, STATIC);
 
 /***/ }),
-/* 172 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38158,7 +38473,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 173 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38174,7 +38489,7 @@ var _macro = __webpack_require__(0);
 
 var _macro2 = _interopRequireDefault(_macro);
 
-var _DataAccessHelper = __webpack_require__(174);
+var _DataAccessHelper = __webpack_require__(175);
 
 var _DataAccessHelper2 = _interopRequireDefault(_DataAccessHelper);
 
@@ -38298,7 +38613,7 @@ var newInstance = exports.newInstance = _macro2.default.newInstance(extend, 'vtk
 exports.default = { newInstance: newInstance, extend: extend };
 
 /***/ }),
-/* 174 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38308,11 +38623,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _HtmlDataAccessHelper = __webpack_require__(175);
+var _HtmlDataAccessHelper = __webpack_require__(176);
 
 var _HtmlDataAccessHelper2 = _interopRequireDefault(_HtmlDataAccessHelper);
 
-var _HttpDataAccessHelper = __webpack_require__(184);
+var _HttpDataAccessHelper = __webpack_require__(75);
 
 var _HttpDataAccessHelper2 = _interopRequireDefault(_HttpDataAccessHelper);
 
@@ -38346,7 +38661,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 175 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38496,14 +38811,14 @@ exports.default = {
 };
 
 /***/ }),
-/* 176 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 
-var zlib_deflate = __webpack_require__(177);
+var zlib_deflate = __webpack_require__(178);
 var utils        = __webpack_require__(13);
 var strings      = __webpack_require__(72);
 var msg          = __webpack_require__(42);
@@ -38903,7 +39218,7 @@ exports.gzip = gzip;
 
 
 /***/ }),
-/* 177 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38929,7 +39244,7 @@ exports.gzip = gzip;
 // 3. This notice may not be removed or altered from any source distribution.
 
 var utils   = __webpack_require__(13);
-var trees   = __webpack_require__(178);
+var trees   = __webpack_require__(179);
 var adler32 = __webpack_require__(70);
 var crc32   = __webpack_require__(71);
 var msg     = __webpack_require__(42);
@@ -40784,7 +41099,7 @@ exports.deflateTune = deflateTune;
 
 
 /***/ }),
-/* 178 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42011,20 +42326,20 @@ exports._tr_align = _tr_align;
 
 
 /***/ }),
-/* 179 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 
-var zlib_inflate = __webpack_require__(180);
+var zlib_inflate = __webpack_require__(181);
 var utils        = __webpack_require__(13);
 var strings      = __webpack_require__(72);
 var c            = __webpack_require__(74);
 var msg          = __webpack_require__(42);
 var ZStream      = __webpack_require__(73);
-var GZheader     = __webpack_require__(183);
+var GZheader     = __webpack_require__(184);
 
 var toString = Object.prototype.toString;
 
@@ -42436,7 +42751,7 @@ exports.ungzip  = inflate;
 
 
 /***/ }),
-/* 180 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42464,8 +42779,8 @@ exports.ungzip  = inflate;
 var utils         = __webpack_require__(13);
 var adler32       = __webpack_require__(70);
 var crc32         = __webpack_require__(71);
-var inflate_fast  = __webpack_require__(181);
-var inflate_table = __webpack_require__(182);
+var inflate_fast  = __webpack_require__(182);
+var inflate_table = __webpack_require__(183);
 
 var CODES = 0;
 var LENS = 1;
@@ -43999,7 +44314,7 @@ exports.inflateUndermine = inflateUndermine;
 
 
 /***/ }),
-/* 181 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44351,7 +44666,7 @@ module.exports = function inflate_fast(strm, start) {
 
 
 /***/ }),
-/* 182 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44701,7 +45016,7 @@ module.exports = function inflate_table(type, lens, lens_index, codes, table, ta
 
 
 /***/ }),
-/* 183 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44764,247 +45079,6 @@ function GZheader() {
 
 module.exports = GZheader;
 
-
-/***/ }),
-/* 184 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _pako = __webpack_require__(30);
-
-var _pako2 = _interopRequireDefault(_pako);
-
-var _macro = __webpack_require__(0);
-
-var _macro2 = _interopRequireDefault(_macro);
-
-var _Endian = __webpack_require__(43);
-
-var _Endian2 = _interopRequireDefault(_Endian);
-
-var _Constants = __webpack_require__(8);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var vtkErrorMacro = _macro2.default.vtkErrorMacro,
-    vtkDebugMacro = _macro2.default.vtkDebugMacro;
-
-/* eslint-disable prefer-promise-reject-errors */
-
-var requestCount = 0;
-
-function fetchBinary(url) {
-  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-  return new Promise(function (resolve, reject) {
-    var xhr = new XMLHttpRequest();
-
-    xhr.onreadystatechange = function (e) {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200 || xhr.status === 0) {
-          resolve(xhr.response);
-        } else {
-          reject({ xhr: xhr, e: e });
-        }
-      }
-    };
-
-    if (options && options.progressCallback) {
-      xhr.addEventListener('progress', options.progressCallback);
-    }
-
-    // Make request
-    xhr.open('GET', url, true);
-    xhr.responseType = 'arraybuffer';
-    xhr.send();
-  });
-}
-
-function fetchArray() {
-  var instance = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var baseURL = arguments[1];
-  var array = arguments[2];
-  var options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
-
-  if (array.ref && !array.ref.pending) {
-    return new Promise(function (resolve, reject) {
-      var xhr = new XMLHttpRequest();
-      var url = [baseURL, array.ref.basepath, options.compression ? array.ref.id + '.gz' : array.ref.id].join('/');
-
-      xhr.onreadystatechange = function (e) {
-        if (xhr.readyState === 1) {
-          array.ref.pending = true;
-          if (++requestCount === 1 && instance.invokeBusy) {
-            instance.invokeBusy(true);
-          }
-        }
-        if (xhr.readyState === 4) {
-          array.ref.pending = false;
-          if (xhr.status === 200 || xhr.status === 0) {
-            array.buffer = xhr.response;
-
-            if (options.compression) {
-              if (array.dataType === 'string' || array.dataType === 'JSON') {
-                array.buffer = _pako2.default.inflate(new Uint8Array(array.buffer), {
-                  to: 'string'
-                });
-              } else {
-                array.buffer = _pako2.default.inflate(new Uint8Array(array.buffer)).buffer;
-              }
-            }
-
-            if (array.ref.encode === 'JSON') {
-              array.values = JSON.parse(array.buffer);
-            } else {
-              if (_Endian2.default.ENDIANNESS !== array.ref.encode && _Endian2.default.ENDIANNESS) {
-                // Need to swap bytes
-                vtkDebugMacro('Swap bytes of ' + array.name);
-                _Endian2.default.swapBytes(array.buffer, _Constants.DataTypeByteSize[array.dataType]);
-              }
-
-              array.values = new window[array.dataType](array.buffer);
-            }
-
-            if (array.values.length !== array.size) {
-              vtkErrorMacro('Error in FetchArray: ' + array.name + ', does not have the proper array size. Got ' + array.values.length + ', instead of ' + array.size);
-            }
-
-            // Done with the ref and work
-            delete array.ref;
-            if (--requestCount === 0 && instance.invokeBusy) {
-              instance.invokeBusy(false);
-            }
-            if (instance.modified) {
-              instance.modified();
-            }
-            resolve(array);
-          } else {
-            reject({ xhr: xhr, e: e });
-          }
-        }
-      };
-
-      if (options && options.progressCallback) {
-        xhr.addEventListener('progress', options.progressCallback);
-      }
-
-      // Make request
-      xhr.open('GET', url, true);
-      xhr.responseType = options.compression || array.dataType !== 'string' ? 'arraybuffer' : 'text';
-      xhr.send();
-    });
-  }
-
-  return Promise.resolve(array);
-}
-
-// ----------------------------------------------------------------------------
-
-function fetchJSON() {
-  var instance = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var url = arguments[1];
-  var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-
-  return new Promise(function (resolve, reject) {
-    var xhr = new XMLHttpRequest();
-
-    xhr.onreadystatechange = function (e) {
-      if (xhr.readyState === 1) {
-        if (++requestCount === 1 && instance.invokeBusy) {
-          instance.invokeBusy(true);
-        }
-      }
-      if (xhr.readyState === 4) {
-        if (--requestCount === 0 && instance.invokeBusy) {
-          instance.invokeBusy(false);
-        }
-        if (xhr.status === 200 || xhr.status === 0) {
-          if (options.compression) {
-            resolve(JSON.parse(_pako2.default.inflate(new Uint8Array(xhr.response), { to: 'string' })));
-          } else {
-            resolve(JSON.parse(xhr.responseText));
-          }
-        } else {
-          reject({ xhr: xhr, e: e });
-        }
-      }
-    };
-
-    if (options && options.progressCallback) {
-      xhr.addEventListener('progress', options.progressCallback);
-    }
-
-    // Make request
-    xhr.open('GET', url, true);
-    xhr.responseType = options.compression ? 'arraybuffer' : 'text';
-    xhr.send();
-  });
-}
-
-// ----------------------------------------------------------------------------
-
-function fetchText() {
-  var instance = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var url = arguments[1];
-  var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-
-  if (options && options.compression && options.compression !== 'gz') {
-    vtkErrorMacro('Supported algorithms are: [gz]');
-    vtkErrorMacro('Unkown compression algorithm: ' + options.compression);
-  }
-
-  return new Promise(function (resolve, reject) {
-    var xhr = new XMLHttpRequest();
-
-    xhr.onreadystatechange = function (e) {
-      if (xhr.readyState === 1) {
-        if (++requestCount === 1 && instance.invokeBusy) {
-          instance.invokeBusy(true);
-        }
-      }
-      if (xhr.readyState === 4) {
-        if (--requestCount === 0 && instance.invokeBusy) {
-          instance.invokeBusy(false);
-        }
-        if (xhr.status === 200 || xhr.status === 0) {
-          if (options.compression) {
-            resolve(_pako2.default.inflate(new Uint8Array(xhr.response), { to: 'string' }));
-          } else {
-            resolve(xhr.responseText);
-          }
-        } else {
-          reject({ xhr: xhr, e: e });
-        }
-      }
-    };
-
-    if (options.progressCallback) {
-      xhr.addEventListener('progress', options.progressCallback);
-    }
-
-    // Make request
-    xhr.open('GET', url, true);
-    xhr.responseType = options.compression ? 'arraybuffer' : 'text';
-    xhr.send();
-  });
-}
-
-// ----------------------------------------------------------------------------
-
-exports.default = {
-  fetchArray: fetchArray,
-  fetchJSON: fetchJSON,
-  fetchText: fetchText,
-  fetchBinary: fetchBinary // Only for HTTP
-};
-
-/* eslint-enable prefer-promise-reject-errors */
 
 /***/ }),
 /* 185 */
@@ -45262,7 +45336,7 @@ function JSZip() {
 JSZip.prototype = __webpack_require__(187);
 JSZip.prototype.loadAsync = __webpack_require__(222);
 JSZip.support = __webpack_require__(14);
-JSZip.defaults = __webpack_require__(86);
+JSZip.defaults = __webpack_require__(87);
 
 // TODO find a better way to handle this version,
 // a require('package.json').version doesn't work with webpack, see #327
@@ -45285,8 +45359,8 @@ module.exports = JSZip;
 var utf8 = __webpack_require__(18);
 var utils = __webpack_require__(1);
 var GenericWorker = __webpack_require__(6);
-var StreamHelper = __webpack_require__(85);
-var defaults = __webpack_require__(86);
+var StreamHelper = __webpack_require__(86);
+var defaults = __webpack_require__(87);
 var CompressedObject = __webpack_require__(49);
 var ZipObject = __webpack_require__(217);
 var generate = __webpack_require__(218);
@@ -45771,13 +45845,13 @@ var Stream = (function (){
     return __webpack_require__(31); // hack to fix a circular dependency issue when used with browserify
   } catch(_){}
 }());
-exports = module.exports = __webpack_require__(77);
+exports = module.exports = __webpack_require__(78);
 exports.Stream = Stream || exports;
 exports.Readable = exports;
 exports.Writable = __webpack_require__(45);
 exports.Duplex = __webpack_require__(15);
 exports.Transform = __webpack_require__(46);
-exports.PassThrough = __webpack_require__(79);
+exports.PassThrough = __webpack_require__(80);
 
 
 /***/ }),
@@ -45851,7 +45925,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
                          (typeof global !== "undefined" && global.clearImmediate) ||
                          (this && this.clearImmediate);
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11)))
 
 /***/ }),
 /* 192 */
@@ -46044,7 +46118,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9), __webpack_require__(33)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11), __webpack_require__(33)))
 
 /***/ }),
 /* 193 */
@@ -46118,14 +46192,14 @@ function config (name) {
   return String(val).toLowerCase() === 'true';
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11)))
 
 /***/ }),
 /* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* eslint-disable node/no-deprecated-api */
-var buffer = __webpack_require__(11)
+var buffer = __webpack_require__(10)
 var Buffer = buffer.Buffer
 
 // alternative to using Object.keys for old browsers
@@ -46213,7 +46287,7 @@ module.exports = __webpack_require__(46)
 /* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(79)
+module.exports = __webpack_require__(80)
 
 
 /***/ }),
@@ -46221,7 +46295,7 @@ module.exports = __webpack_require__(79)
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(200);
-module.exports = __webpack_require__(81).setImmediate;
+module.exports = __webpack_require__(82).setImmediate;
 
 /***/ }),
 /* 200 */
@@ -46239,8 +46313,8 @@ $export($export.G + $export.B, {
 /***/ (function(module, exports, __webpack_require__) {
 
 var global    = __webpack_require__(35)
-  , core      = __webpack_require__(81)
-  , ctx       = __webpack_require__(82)
+  , core      = __webpack_require__(82)
+  , ctx       = __webpack_require__(83)
   , hide      = __webpack_require__(203)
   , PROTOTYPE = 'prototype';
 
@@ -46357,8 +46431,8 @@ module.exports = function(it){
 /* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = !__webpack_require__(48) && !__webpack_require__(83)(function(){
-  return Object.defineProperty(__webpack_require__(84)('div'), 'a', {get: function(){ return 7; }}).a != 7;
+module.exports = !__webpack_require__(48) && !__webpack_require__(84)(function(){
+  return Object.defineProperty(__webpack_require__(85)('div'), 'a', {get: function(){ return 7; }}).a != 7;
 });
 
 /***/ }),
@@ -46395,10 +46469,10 @@ module.exports = function(bitmap, value){
 /* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ctx                = __webpack_require__(82)
+var ctx                = __webpack_require__(83)
   , invoke             = __webpack_require__(210)
   , html               = __webpack_require__(211)
-  , cel                = __webpack_require__(84)
+  , cel                = __webpack_require__(85)
   , global             = __webpack_require__(35)
   , process            = global.process
   , setTask            = global.setImmediate
@@ -46843,7 +46917,7 @@ function immediate(task) {
   }
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11)))
 
 /***/ }),
 /* 215 */
@@ -46885,7 +46959,7 @@ module.exports = ConvertWorker;
 "use strict";
 
 
-var Readable = __webpack_require__(76).Readable;
+var Readable = __webpack_require__(77).Readable;
 
 var utils = __webpack_require__(1);
 utils.inherits(NodejsStreamOutputAdapter, Readable);
@@ -46934,8 +47008,8 @@ module.exports = NodejsStreamOutputAdapter;
 "use strict";
 
 
-var StreamHelper = __webpack_require__(85);
-var DataWorker = __webpack_require__(87);
+var StreamHelper = __webpack_require__(86);
+var DataWorker = __webpack_require__(88);
 var utf8 = __webpack_require__(18);
 var CompressedObject = __webpack_require__(49);
 var GenericWorker = __webpack_require__(6);
@@ -47065,7 +47139,7 @@ module.exports = ZipObject;
 "use strict";
 
 
-var compressions = __webpack_require__(90);
+var compressions = __webpack_require__(91);
 var ZipFileWorker = __webpack_require__(220);
 
 /**
@@ -47225,7 +47299,7 @@ var utils = __webpack_require__(1);
 var GenericWorker = __webpack_require__(6);
 var utf8 = __webpack_require__(18);
 var crc32 = __webpack_require__(50);
-var signature = __webpack_require__(91);
+var signature = __webpack_require__(92);
 
 /**
  * Transform an integer into a string in hexadecimal.
@@ -47853,7 +47927,7 @@ var external = __webpack_require__(24);
 var utf8 = __webpack_require__(18);
 var utils = __webpack_require__(1);
 var ZipEntries = __webpack_require__(223);
-var Crc32Probe = __webpack_require__(89);
+var Crc32Probe = __webpack_require__(90);
 var nodejsUtils = __webpack_require__(34);
 
 /**
@@ -47937,9 +48011,9 @@ module.exports = function(data, options) {
 
 "use strict";
 
-var readerFor = __webpack_require__(92);
+var readerFor = __webpack_require__(93);
 var utils = __webpack_require__(1);
-var sig = __webpack_require__(91);
+var sig = __webpack_require__(92);
 var ZipEntry = __webpack_require__(226);
 var utf8 = __webpack_require__(18);
 var support = __webpack_require__(14);
@@ -48206,7 +48280,7 @@ module.exports = ZipEntries;
 
 "use strict";
 
-var DataReader = __webpack_require__(94);
+var DataReader = __webpack_require__(95);
 var utils = __webpack_require__(1);
 
 function StringReader(data) {
@@ -48251,7 +48325,7 @@ module.exports = StringReader;
 
 "use strict";
 
-var Uint8ArrayReader = __webpack_require__(95);
+var Uint8ArrayReader = __webpack_require__(96);
 var utils = __webpack_require__(1);
 
 function NodeBufferReader(data) {
@@ -48277,12 +48351,12 @@ module.exports = NodeBufferReader;
 
 "use strict";
 
-var readerFor = __webpack_require__(92);
+var readerFor = __webpack_require__(93);
 var utils = __webpack_require__(1);
 var CompressedObject = __webpack_require__(49);
 var crc32fn = __webpack_require__(50);
 var utf8 = __webpack_require__(18);
-var compressions = __webpack_require__(90);
+var compressions = __webpack_require__(91);
 var support = __webpack_require__(14);
 
 var MADE_BY_DOS = 0x00;
